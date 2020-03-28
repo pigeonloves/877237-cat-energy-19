@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Андрей Азенков](https://up.htmlacademy.ru/adaptive/19/user/877237).
-* Наставник: `Неизвестно`.
+* Наставник: [Елизавета Цыгвинцева](https://up.htmlacademy.ru/adaptive/19/user/572195).
 
 ---
 
