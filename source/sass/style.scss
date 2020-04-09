@@ -1,0 +1,35 @@
+@import "normalize.scss";
+
+// Шрифты
+@import "global/fonts.scss";
+
+// Переменные
+@import "global/vars.scss";
+
+// Основные параметры страницы
+@import "global//scaffolding.scss";
+
+// Общие блоки
+@import "blocks/common/page-header.scss";
+@import "blocks/common/logo.scss";
+@import "blocks/common/main-nav.scss";
+@import "blocks/common/button.scss";
+@import "blocks/common/map.scss";
+@import "blocks/common/page-footer.scss";
+@import "blocks/common/socials.scss";
+
+// Главная страница
+@import "blocks/index/page-main.scss";
+@import "blocks/index/promo.scss";
+@import "blocks/index/programs.scss";
+@import "blocks/index/advantages.scss";
+@import "blocks/index/example.scss";
+
+// Страница каталога
+@import "blocks/catalog/page-catalog.scss";
+@import "blocks/catalog/catalog.scss";
+@import "blocks/catalog/extra-goods.scss";
+
+// Страница формы
+@import "blocks/form/page-form.scss";
+@import "blocks/form/form.scss";

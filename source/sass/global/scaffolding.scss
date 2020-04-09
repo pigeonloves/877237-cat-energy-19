@@ -1,0 +1,31 @@
+html,
+body {
+  font-family: $oswald;
+  font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1;
+  box-sizing: border-box;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  background-color: $white;
+  color: $black-two;
+}
+
+a {
+  color: $black-two;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
