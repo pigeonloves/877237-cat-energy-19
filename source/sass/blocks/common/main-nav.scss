@@ -1,0 +1,23 @@
+.main-nav {
+  margin: 0;
+  width: 320px;
+}
+
+.main-nav__list {
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__item {
+  box-sizing: border-box;
+  padding: 22px 0;
+  min-height: 65px;
+  text-align: center;
+
+  border-bottom: $grey-border;
+}
+
+.main-nav__link {
+  font-size: 20px;
+  line-height: 20px;
+}

@@ -1,0 +1,49 @@
+.programs__button {
+  margin: 0;
+  padding: 14px 0 11px;
+  width: 280px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.programs__list {
+  width: 320px;
+  padding: 0;
+  list-style: none;
+}
+
+.programs__item {
+  margin: 0;
+  margin-bottom: 20px;
+  width: 280px;
+  min-height: 266px;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: $white-four;
+}
+
+.programs__title {
+  margin: 39px 0 36px 92px;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 37px;
+}
+
+.programs__description {
+  margin: 0;
+  margin-left: 21px;
+  padding-bottom: 23px;
+  font-family: $arial;
+  font-size: 14px;
+  line-height: 18px;
+  color: $dark-grey;
+  border-bottom: $grey-border;
+}
+
+.programs__link {
+  display: block;
+  margin: 20px 0 22px 20px;
+  font-size: 16px;
+  line-height: 16px;
+}
