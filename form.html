@@ -3,22 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>Интернет-магазин «Кэт-энерджи»</title>
+    <link href="source/css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-      <img class="logo page-header__logo-image" src="https://via.placeholder.com/191x39"  alt="Логотип интернет-магазина «Кэт-энерджи»">
+      <img class="logo page-header__logo-image" src="../source/img/logo-mobile.svg" width="191" height="39" alt="Логотип интернет-магазина «Кэт-энерджи»">
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a href="index.html">Главная</a>
+              <a class="main-nav__link" href="index.html">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a href="catalog.html">Каталог продукции</a>
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="main-nav__item">
-              <a>Подбор программы</a>
+              <a class="main-nav__link">Подбор программы</a>
             </li>
           </ul>
         </div>
@@ -28,7 +29,7 @@
     <main class="page-form">
       <section class="form">
         <h1 class="form__title">Подбор программы</h1>
-        <p>Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <p class="form__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
         <form class="form__space" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="form__fieldset">
             <label class="form__label">
@@ -62,7 +63,7 @@
             <legend class="form__legend">Контактные данные (владельца кота)</legend>
             <label class="form__label">
               E-mail:*
-              <input class="form__input-text" type="mail" name="mail" placeholder="kuklachev@gmail.com" required>
+              <input class="form__input-text" type="email" name="email" placeholder="kuklachev@gmail.com" required>
             </label>
             <label class="form__label">
               Телефон:*
@@ -92,7 +93,7 @@
               Витамины
             </label>
           </fieldset>
-          <button class="form__submit" type="submit">Отправить заявку</button>
+          <button class="button form__submit" type="submit">Отправить заявку</button>
           <p class="form__required-field">* — Обязательные поля</p>
         </form>
       </section>
@@ -101,12 +102,12 @@
         <h2 class="visually-hidden">Карта</h2>
         <p class="map__invite">Приглашаем к сотрудничеству дилеров!</p>
         <p class="map__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-        <img class="map__image" src="https://via.placeholder.com/320x400" alt="Расположение офиса интернет-магазина «Кэт-энерджи»">
+        <img class="map__image" src="../source/img/bg-map-mobile@1x.png" width="320" height="400" alt="Расположение офиса интернет-магазина «Кэт-энерджи»">
       </section>
     </main>
 
     <footer class="page-footer">
-      <img class="logo page-footer__logo-image logo--footer" src="https://via.placeholder.com/128x24" alt="Логотип «Кэт-энерджи»">
+      <img class="logo page-footer__logo-image logo--footer" src="../source/img/logo-footer.svg" width="128" height="24" alt="Логотип «Кэт-энерджи»">
       <div class="socials page-footer__socials">
         <ul class="socials__list">
           <li class="socials__item">Vk</li>
@@ -116,7 +117,7 @@
       </div>
       <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
         <p class="page-footer__link-text">HTML Academy</p>
-        <img class="page-footer__link-image" src="https://via.placeholder.com/27x34" alt="Логотип HTML Academy">
+        <img class="page-footer__link-image" src="../source/img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
       </a>
     </footer>
   </body>
