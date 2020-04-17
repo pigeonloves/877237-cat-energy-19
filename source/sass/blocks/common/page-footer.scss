@@ -1,6 +1,33 @@
 .page-footer {
-  width: 320px;
+  min-width: 320px;
   background-color: $white-four;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    padding: 0 30px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.page-footer__logo-image {
+  margin: 39px 0 31px;
+}
+
+.page-footer__link {
+  margin: 0 20px;
+  // min-width: 320px;
+  display: flex;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer__link {
+    margin: 0;
+  }
 }
 
 .page-footer__link-text {
