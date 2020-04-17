@@ -1,3 +1,26 @@
 .page-header {
+  margin: 0 auto;
   min-width: 320px;
+  min-height: 65px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.page-header__logo-image {
+  padding: 11px 0 15px 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__logo-image {
+    padding: 24px 0 15px 29px;
+  }
 }
