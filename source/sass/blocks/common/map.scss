@@ -1,12 +1,47 @@
+.map {
+  display: flex;
+  flex-direction: column;
+}
+
+.map__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+
 .map__invite {
+  width: 125px;
+
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
 }
 
-.map__adress {
-  font-family: $arial;
+.map__address {
+  width: 135px;
+
   font-size: 14px;
   line-height: 20px;
+  font-family: $arial;
   color: $dark-grey;
+}
+
+.map__image {
+  align-self: center;
+}
+
+@media (min-width: $tablet-width) {
+  .map__wrapper {
+    margin: 0 30px;
+  }
+
+  .map__address {
+    text-align: end;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map__address {
+    text-align: start;
+  }
 }

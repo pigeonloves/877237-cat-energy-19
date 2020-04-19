@@ -1,27 +1,137 @@
 .promo {
-  width: 320px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+
+  // Для зеленого фона
+  // height: 305px;
+  // margin-bottom: 190px;
   // background-color: $leaf;
+
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-position: top center;
 }
 
+// .promo__wrapper {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   min-width: 320px;
+//   min-height: 270px;
+
+//   padding-bottom: 100px;
+
+//   background-color: $leaf;
+//   background-image: url("../img/index-background-mobile@1x.jpg");
+//   background-repeat: no-repeat;
+//   background-position: top center;
+// }
+
 .promo__title {
-  margin: 0;
-  padding: 29px 0 19px;
-  font-size: 36px;
+  width: 250px;
+  margin: 29px 0 19px;
+
   font-weight: 400;
+  font-size: 36px;
   line-height: 36px;
-  color: $white;
   text-align: center;
+  color: $white;
 }
 
 .promo__slogan {
   margin: 0;
-  padding-bottom: 29px;
-  font-size: 14px;
+  margin-bottom: 29px;
+
   font-weight: 400;
+  font-size: 14px;
   line-height: 14px;
-  color: $white;
-  text-transform: uppercase;
   text-align: center;
+  text-transform: uppercase;
+  color: $white;
+}
+
+.promo__button {
+  width: 280px;
+  // margin: 0 20px;
+  padding: 14px 0 11px;
+
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .promo {
+    align-items: flex-start;
+
+    background-image: none;
+  }
+
+  .promo__wrapper {
+    margin-left: 120px;
+  }
+
+  .promo__title {
+    width: 415px;
+    // margin-left: 120px;
+    margin-bottom: 33px;
+
+    font-size: 60px;
+    line-height: 60px;
+    color: $black-two;
+    text-align: start;
+  }
+
+  .promo__slogan {
+    text-align: start;
+    // margin-left: 120px;
+
+    font-size: 20px;
+    line-height: 20px;
+    color: $black-two;
+  }
+
+  .promo__image {
+    align-self: center;
+
+    font-size: 20px;
+    line-height: 20px;
+    color: $black-two;
+  }
+
+  .promo__button {
+    position: absolute;
+    top: 240px;
+    left: 120px;
+
+    width: 245px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo {
+    flex-direction: row;
+
+    min-height: 554px;
+
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-position: top right;
+  }
+
+  .promo__wrapper {
+    margin-left: 190px;
+  }
+
+  .promo__image {
+    align-self: auto;
+  }
+
+  .promo__button {
+    left: 190px;
+  }
 }
