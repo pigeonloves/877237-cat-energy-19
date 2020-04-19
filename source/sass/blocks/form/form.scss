@@ -1,6 +1,6 @@
 .form__title {
-  font-size: 36px;
   font-weight: 400;
+  font-size: 36px;
   line-height: 60px;
   color: $black-two;
 }
@@ -12,6 +12,17 @@
   color: $black-two;
 }
 
+.form__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__fieldset {
+  display: flex;
+
+  border: none;
+}
+
 .form__legend {
   font-size: 24px;
   line-height: 24px;
@@ -19,10 +30,18 @@
 }
 
 .form__label {
+  display: flex;
+  margin: 0 20px;
+
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   color: $black-three;
+}
+
+.form__input-text {
+  flex-grow: 1;
+  margin-left: 13px;
 }
 
 .form__input-text::-webkit-input-placeholder {
@@ -47,7 +66,8 @@
 }
 
 .form__textarea {
-  width: 100%;
+  width: 94%;
+  margin: 0 20px;
 }
 
 .form__textarea::-webkit-input-placeholder {
@@ -71,17 +91,65 @@
   color: $dark-grey;
 }
 
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+}
+
 .form__submit {
   display: inline-block;
   padding: 8px 84px 12px;
+
   font-size: 16px;
   line-height: 20px;
+
   border: none;
 }
 
 .form__required-field {
-  font-family: $arial;
   font-size: 14px;
   line-height: 16px;
+  font-family: $arial;
   color: $dark-grey;
+}
+
+@media (min-width: $tablet-width) {
+  .form__container-extra {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__label--extra {
+    width: 40%;
+  }
+
+  .form__wrapper {
+    flex-direction: row;
+  }
+
+  .form__submit {
+    width: 50%;
+  }
+
+  .form__required-field {
+    width: 50%;
+    text-align: center;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__container {
+    flex-direction: row;
+  }
+
+  .form__fieldset:nth-of-type(1),
+  .form__fieldset:nth-of-type(2) {
+    flex-grow: 1;
+  }
+
+  .form__label--extra {
+    width: 22%;
+  }
 }
