@@ -1,51 +1,211 @@
 .extra-goods {
-  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 }
 
 .extra-goods__title {
-  font-size: 24px;
+  margin-left: 20px;
+
   font-weight: 400;
+  font-size: 24px;
   line-height: 24px;
   color: $black-two;
 }
 
 .extra-goods__list {
+  margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
+.extra-goods__item {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+}
+
 .extra-goods__item-title {
-  font-size: 16px;
   font-weight: 400;
+  font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
   color: $black-three;
 }
 
-.extra-goods__td {
-  font-family: $arial;
+.extra-goods__table {
+  width: 100%;
+}
+
+.extra-goods__td-1,
+.extra-goods__td-2 {
+  width: 50%;
+
   font-size: 14px;
   line-height: 14px;
+  font-family: $arial;
   color: $dark-grey;
 }
 
+.extra-goods__td-2 {
+  text-align: end;
+}
+
 .extra-goods__buy {
-  display: inline-block;
-  padding: 10px 108px;
+  padding: 10px 0;
+
   font-size: 16px;
   line-height: 20px;
+  text-align: center;
 }
 
 .extra-goods__gift {
-  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
   height: 289px;
+  margin: 0 20px;
+
+  background-color: $leaf;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-position: top center;
 }
 
 .extra-goods__gift-text {
-  font-family: $arial;
+  width: 162px;
+  margin: 0;
+  margin-bottom: 43px;
+
   font-size: 16px;
   line-height: 20px;
+  font-family: $arial;
+  text-align: center;
   color: $white;
+}
+
+@media (min-width: $tablet-width) {
+  .extra-goods__title {
+    margin-left: 70px;
+  }
+
+  .extra-goods__item {
+    margin: 0 30px;
+
+    border: $very-light-pink-three;
+  }
+
+  .extra-goods__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 38px;
+  }
+
+  .extra-goods__item-title {
+    width: 50%;
+    margin: 28px 0 26px;
+  }
+
+  .extra-goods__table {
+    width: 240px;
+    margin: 28px 0 23px;
+  }
+
+  .extra-goods__buy {
+    margin: 0 38px;
+    margin-bottom: 28px;
+  }
+
+  .extra-goods__gift {
+    flex-direction: row;
+    height: 200px;
+    margin: 0 30px;
+
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+  }
+
+  .extra-goods__wrapper {
+    width: 50%;
+    margin: 0;
+  }
+
+  .extra-goods__gift-text {
+    margin: 0;
+    margin-left: 70px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .extra-goods__title {
+    margin-left: 110px;
+  }
+
+  .extra-goods__columns {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 110px;
+  }
+
+  .extra-goods__list {
+    width: 75%;
+  }
+
+  .extra-goods__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 71px;
+    margin: 0;
+
+    border: none;
+    border-top: $very-light-pink-three;
+  }
+
+  .extra-goods__item:last-of-type {
+    border-bottom: $very-light-pink-three;
+  }
+
+  .extra-goods__item-title {
+    align-self: center;
+    width: 325px;
+    margin: 0;
+  }
+
+  .extra-goods__table {
+    align-self: center;
+    width: 285px;
+    margin: 0;
+  }
+
+  .extra-goods__container {
+    margin: 0;
+  }
+
+  .extra-goods__buy {
+    align-self: center;
+    width: 245px;
+    margin: 0;
+  }
+
+  .extra-goods__gift {
+    flex-direction: column;
+    width: 245px;
+    height: 289px;
+    margin: 0;
+
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+  }
+
+  .extra-goods__wrapper {
+    width: 100%;
+    margin: 0;
+  }
+
+  .extra-goods__gift-text {
+    margin: 0;
+    margin-left: 40px;
+    margin-bottom: 43px;
+  }
 }
