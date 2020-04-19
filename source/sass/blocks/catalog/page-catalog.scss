@@ -1,10 +1,30 @@
 .page-catalog {
   min-width: 320px;
+  margin: 0 auto;
 }
 
 .page-catalog__title {
-  font-size: 36px;
+  margin: 0 auto;
+  margin-left: 20px;
+
   font-weight: 400;
+  font-size: 36px;
   line-height: 60px;
   color: $black-two;
+}
+
+@media (min-width: $tablet-width) {
+  .page-catalog__title {
+    margin-left: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-catalog {
+    width: 1440px;
+  }
+
+  .page-catalog__title {
+    margin-left: 110px;
+  }
 }
