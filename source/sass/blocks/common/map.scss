@@ -1,24 +1,41 @@
 .map {
+  position: relative;
+
   display: flex;
   flex-direction: column;
+}
+
+.map--bg {
+  background-color: $white-four;
 }
 
 .map__wrapper {
   display: flex;
   justify-content: space-between;
-  margin: 0 20px;
+  min-height: 114px;
+  margin: 0;
+  margin-left: 19px;
+  margin-right: 24px;
 }
 
 .map__invite {
   width: 125px;
+  margin-top: 30px;
 
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
 }
 
-.map__address {
+.map__address-wrapper {
+  display: flex;
+  flex-direction: column;
   width: 135px;
+  margin-top: 30px;
+}
+
+.map__address {
+  margin: 0;
 
   font-size: 14px;
   line-height: 20px;
@@ -28,19 +45,67 @@
 
 .map__image {
   align-self: center;
+
+  margin-top: -36px;
 }
 
 @media (min-width: $tablet-width) {
   .map__wrapper {
-    margin: 0 30px;
+    min-height: 201px;
+    margin: 0 71px;
+  }
+
+  .map__invite {
+    width: 154px;
+    margin-top: 66px;
+
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .map__address-wrapper {
+    justify-content: space-between;
+    width: 160px;
+    margin-top: 64px;
+    margin-bottom: 57px;
   }
 
   .map__address {
+    font-size: 16px;
+    line-height: 20px;
     text-align: end;
+  }
+
+  .map__image {
+    margin-top: 0;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .map--bg {
+    background-color: $white;
+  }
+
+  .map__wrapper {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+
+    display: flex;
+    width: 570px;
+    margin: 0;
+
+    background-color: $white;
+  }
+
+  .map__invite {
+    margin-left: 76px;
+  }
+
+  .map__address-wrapper {
+    margin-right: 85px;
+  }
+
   .map__address {
     text-align: start;
   }

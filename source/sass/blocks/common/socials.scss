@@ -1,7 +1,23 @@
+.socials {
+  // width: 100%;
+}
+
 .socials__list {
   display: flex;
-  margin: 0;
+  align-items: center;
+  justify-content: center;
+  min-height: 62px;
+  margin: 0 auto;
   padding: 0;
 
+  border-top: $very-light-pink-three;
+  border-bottom: $very-light-pink-three;
+
   list-style: none;
+}
+
+@media (min-width: $tablet-width) {
+  .socials__list {
+    border: none;
+  }
 }
