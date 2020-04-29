@@ -4,12 +4,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
+  // margin-bottom: 22px;
 
   // Для зеленого фона
-  // height: 305px;
-  // margin-bottom: 190px;
-  // background-color: $leaf;
+  height: 305px;
+  margin-bottom: 197px;
+  background-color: $leaf;
 
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -33,7 +33,7 @@
 
 .promo__title {
   width: 250px;
-  margin: 29px 0 19px;
+  margin: 26px 0 24px;
 
   font-weight: 400;
   font-size: 36px;
@@ -57,8 +57,10 @@
 .promo__button {
   width: 280px;
   // margin: 0 20px;
-  padding: 14px 0 11px;
+  margin-top: 4px;
+  padding: 12px 0 12px;
 
+  line-height: 16px;
   text-align: center;
 }
 
@@ -67,16 +69,20 @@
     align-items: flex-start;
 
     background-image: none;
+    background-color: $white;
+
+    //
+    margin-bottom: 532px;
   }
 
   .promo__wrapper {
-    margin-left: 120px;
+    margin-left: 117px;
   }
 
   .promo__title {
     width: 415px;
     // margin-left: 120px;
-    margin-bottom: 33px;
+    margin-bottom: 41px;
 
     font-size: 60px;
     line-height: 60px;
@@ -86,7 +92,7 @@
 
   .promo__slogan {
     text-align: start;
-    // margin-left: 120px;
+    margin-left: 1px;
 
     font-size: 20px;
     line-height: 20px;
@@ -103,10 +109,12 @@
 
   .promo__button {
     position: absolute;
-    top: 240px;
-    left: 120px;
+    top: 255px;
+    left: 119px;
 
     width: 245px;
+    margin: 0;
+    padding: 15px 0 17px;
 
     font-size: 20px;
     line-height: 20px;
@@ -121,6 +129,9 @@
 
     background-image: url("../img/index-background-desktop@1x.jpg");
     background-position: top right;
+
+    //
+    margin-bottom: 26px;
   }
 
   .promo__wrapper {
@@ -132,6 +143,7 @@
   }
 
   .promo__button {
+    top: 260px;
     left: 190px;
   }
 }

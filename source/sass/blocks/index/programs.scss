@@ -3,6 +3,11 @@
   flex-direction: column;
   align-items: center;
   margin: 0 auto;
+  margin-bottom: 22px;
+}
+
+.programs__wrapper {
+  margin: 0 20px;
 }
 
 .programs__list {
@@ -20,25 +25,29 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 266px;
-  margin: 0 20px;
+  margin: 0;
   margin-bottom: 20px;
 
   background-color: $white-four;
 }
 
+.programs__item:last-of-type {
+  margin-bottom: 0;
+}
+
 .programs__title {
-  margin: 30px 0 30px 91px;
+  margin: 30px 0 31px 91px;
 
   font-weight: 400;
   font-size: 24px;
-  line-height: 37px;
+  line-height: 36px;
   text-transform: uppercase;
 }
 
 .programs__description {
   flex-grow: 1;
   margin: 0 21px;
-  margin-bottom: 23px;
+  padding-bottom: 23px;
 
   font-size: 14px;
   line-height: 18px;
@@ -50,7 +59,7 @@
 
 .programs__link {
   display: block;
-  margin: 20px 0 22px 20px;
+  margin: 18px 0 22px 20px;
 
   font-size: 16px;
   line-height: 16px;
@@ -60,16 +69,20 @@
   .programs {
     display: flex;
     flex-direction: row;
+    margin-bottom: 44px;
+  }
+
+  .programs__wrapper {
+    margin: 0 30px;
   }
 
   .programs__item {
     min-height: 372px;
-    margin: 0 30px;
     margin-bottom: 30px;
   }
 
   .programs__title {
-    margin: 81px 0 26px 53px;
+    margin: 76px 0 24px 53px;
 
     font-size: 36px;
     line-height: 37px;
@@ -77,13 +90,17 @@
 
   .programs__description {
     margin-left: 53px;
-    margin-right: 300px;
+    margin-right: 280px;
     // padding: 81px 0 26px 55px;
 
     font-size: 16px;
     line-height: 24px;
 
     border: none;
+  }
+
+  .programs__description--mass {
+    margin-right: 312px;
   }
 
   .programs__link {
@@ -97,28 +114,38 @@
 @media (min-width: $desktop-width) {
   .programs {
     justify-content: space-between;
+    margin-bottom: 73px;
+  }
+
+  .programs__wrapper {
+    margin: 0 110px;
   }
 
   .programs__list {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    margin: 0 70px;
+    // margin: 0 auto;
   }
 
   .programs__item {
     width: 570px;
-    margin: 0 40px;
-    margin-bottom: 40px;
+    margin: 0;
+    margin-right: 80px;
+  }
+
+  .programs__item:last-of-type {
+    margin-right: 0;
   }
 
   .programs__title {
-    margin: 81px 0 75px 216px;
+    margin: 77px 0 73px 214px;
   }
 
   .programs__description {
     margin-right: 50px;
-    margin-bottom: 36px;
+    margin-bottom: 31px;
+    padding: 0;
   }
 
   .programs__link {
