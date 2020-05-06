@@ -1,5 +1,10 @@
+.page-form {
+  margin: 0 auto;
+}
+
+
 @media (min-width: $desktop-width) {
   .page-form {
-    width: 1440px;
+    max-width: 1440px;
   }
 }
