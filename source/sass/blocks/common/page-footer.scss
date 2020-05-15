@@ -21,7 +21,8 @@
 }
 
 .page-footer__logo-image {
-  padding: 39px 0 30px;
+  margin: 39px 0 30px;
+  // padding: 39px 0 30px;
 }
 
 .page-footer__link-wrap {
@@ -43,6 +44,11 @@
   font-family: $arial;
   text-transform: none;
   color: $dark-grey;
+}
+
+.page-footer__link-image {
+  width: 42px;
+  height: 40px;
 }
 
 @media (min-width: $tablet-width) {
