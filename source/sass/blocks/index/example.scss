@@ -112,6 +112,11 @@
   background-color: $white-four;
 }
 
+.example__image {
+  width: 311px;
+  height: 232px;
+}
+
 .example__toggles {
   margin: 34px 0;
 }
@@ -149,7 +154,6 @@
   }
 
   .example__item {
-
     margin-right: 40px;
   }
 
@@ -192,6 +196,14 @@
 
   .example__column-2 {
     min-height: 462px;
+  }
+
+  .example__image {
+    // width: 338px;
+    width: 666px;
+    // height: 449px;
+    height: 520px;
+    margin-top: -170px;
   }
 }
 
@@ -252,5 +264,15 @@
     font-size: 20px;
     line-height: 28px;
     text-align: end;
+  }
+
+  .example__column-2 {
+    margin-right: 86px;
+  }
+
+  .example__image {
+    width: 666px;
+    height: 520px;
+    margin-top: -190px;
   }
 }

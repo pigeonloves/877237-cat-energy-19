@@ -39,12 +39,16 @@
 
 @media (min-width: $desktop-width) {
   .page-header {
+    z-index: 1;
+
     max-width: 1440px;
     margin-bottom: 68px;
-  }
 
-  .page-header--catalog-form {
-    margin-bottom: 60px;
+    // background-color: transparent;
+
+    &--catalog-form {
+      margin-bottom: 60px;
+    }
   }
 
   .page-header__wrapper {

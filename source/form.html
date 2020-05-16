@@ -11,7 +11,11 @@
       <div class="page-header__wrapper">
         <div class="page-header__wrapper-logo">
           <a class="page-header__logo-link" href="index.html">
-            <img class="logo page-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип интернет-магазина «Кэт-энерджи»">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img class="logo page-header__logo-image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип интернет-магазина «Кэт-энерджи»">
+            </picture>
           </a>
         </div>
         <nav class="main-nav main-nav--closed main-nav--opened">
@@ -140,16 +144,20 @@
         </form>
       </section>
 
-      <section class="map map--bg">
+      <section class="map">
         <h2 class="visually-hidden">Карта</h2>
-        <div class="map__wrapper map__wrapper--bg">
+        <div class="map__wrapper">
           <p class="map__invite">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
           <div class="map__address-wrapper">
             <p class="map__address">ул. Большая Конюшенная, д. 19/8</p>
             <p class="map__address">Санкт-Петербург</p>
           </div>
         </div>
-        <img class="map__image" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Расположение офиса интернет-магазина «Кэт-энерджи»">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+          <img class="map__image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400" alt="Расположение офиса интернет-магазина «Кэт-энерджи»">
+        </picture>
       </section>
     </main>
 
@@ -160,9 +168,15 @@
         </a>
         <div class="socials page-footer__socials">
           <ul class="socials__list">
-            <li class="socials__item">Vk</li>
-            <li class="socials__item">Instagram</li>
-            <li class="socials__item">Facebook</li>
+            <li class="socials__item">
+              <a href="https://vk.com" class="socials__link"><img src="img/icon-vk.svg" width="22px" height="12px" alt="Vk" class="socials__image">Vk</a>
+            </li>
+            <li class="socials__item">
+              <a href="https://www.instagram.com" class="socials__link"><img src="img/icon-insta.svg" width="17px" height="17px" alt="Instagram" class="socials__image">Instagram</a>
+            </li>
+            <li class="socials__item">
+              <a href="https://www.facebook.com" class="socials__link"><img src="img/icon-fb.svg" width="10px" height="19px" alt="Facebook" class="socials__image">Facebook</a>
+            </li>
           </ul>
         </div>
         <div class="page-footer__link-wrap">
