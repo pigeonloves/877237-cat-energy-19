@@ -18,6 +18,10 @@
   margin: 0;
 
   background-color: $white-four;
+
+  &--index {
+    background-color: $white;
+  }
 }
 
 .map__invite {
