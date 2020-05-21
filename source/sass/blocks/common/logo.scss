@@ -2,6 +2,14 @@
   width: 191px;
   height: 39px;
   margin: 0 auto;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .logo--footer {

@@ -120,7 +120,7 @@
 
       height: 2px;
 
-      background: #68b738;
+      background: $leaf;
     }
   }
 
@@ -171,6 +171,12 @@
 
     &--bg .main-nav__link {
       color: $white;
+    }
+  }
+
+  .main-nav__list--bg a:not([href]) {
+    &::after {
+      background: $white;
     }
   }
 
