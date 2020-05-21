@@ -154,6 +154,14 @@
 }
 
 .form__item--option {
+  &:hover .form__input-radio + .form__label--option::before {
+    border-color: $pinkish-grey-two;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   &:nth-of-type(1) {
     margin-top: 21px;
   }
@@ -171,10 +179,26 @@
 .form__item--contacts {
   position: relative;
 
-
   display: flex;
   flex-direction: row-reverse;
   margin-bottom: 14px;
+
+  &:nth-of-type(1) .form__icon {
+    position: absolute;
+    top: 15px;
+    right: 17px;
+  }
+
+  &:nth-of-type(2) .form__icon {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+  }
+
+  // &:nth-of-type(1) .form__icon:hover,
+  // &:nth-of-type(2) .form__icon:hover {
+  //   fill: $leaf;
+  // }
 
   &:nth-of-type(1) .form__label--contacts {
     margin-right: 12px;
@@ -184,37 +208,73 @@
     margin-right: 11px;
   }
 
+  &:nth-of-type(1) .form__input,
+  &:nth-of-type(2) .form__input {
+    padding-right: 45px;
+    padding-left: 13px;
+  }
+
   &:last-of-type {
     margin-bottom: 0;
   }
 
-  &:nth-of-type(1)::after {
-    content: "";
+  // &:nth-of-type(1)::after {
+  //   content: "";
 
-    position: absolute;
-    top: 15px;
-    right: 16px;
+  //   position: absolute;
+  //   top: 15px;
+  //   right: 16px;
 
-    width: 18px;
-    height: 13px;
+  //   width: 18px;
+  //   height: 13px;
 
-    background-image: url("../img/icon-mail.svg");
-    background-repeat: no-repeat;
+  //   background-image: url("../img/icon-mail.svg");
+  //   background-repeat: no-repeat;
+  // }
+
+  // &:nth-of-type(2)::after {
+  //   content: "";
+
+  //   position: absolute;
+  //   top: 11px;
+  //   right: 14px;
+
+  //   width: 20px;
+  //   height: 21px;
+
+  //   background-image: url("../img/icon-phone.svg");
+  //   background-repeat: no-repeat;
+  // }
+
+  // &:nth-of-type(1) + .form__input:active .form__item--contacts:nth-of-type(1)::after {
+  //   fill: $leaf;
+  // }
+}
+
+// .form__input--contacts {
+//   &:active {
+//     border-color: #444444;
+//   }
+
+//   &:active .form__item--contacts:nth-of-type(2) .form__icon {
+//     fill: $leaf;
+//   }
+// }
+
+.form__item--extra {
+  &:hover .form__input-checkbox + .form__label--extra::before {
+    border-color: $pinkish-grey-two;
   }
 
-  &:nth-of-type(2)::after {
-    content: "";
-
-    position: absolute;
-    top: 11px;
-    right: 14px;
-
-    width: 20px;
-    height: 21px;
-
-    background-image: url("../img/icon-phone.svg");
-    background-repeat: no-repeat;
+  &:active {
+    opacity: 0.3;
   }
+}
+
+.form__icon {
+  z-index: 1;
+
+  // fill: $leaf;
 }
 
 .form__label {
@@ -268,7 +328,7 @@
   position: relative;
 
   flex-grow: 1;
-  height: 41px;
+  height: 43px;
   padding: 0 13px;
 
   font-size: 16px;
@@ -276,10 +336,38 @@
 
   border: 1px solid rgba(205, 205, 205, 0.5);
 
+  // &:focus {
+  //   outline-color: #444444;
+  // }
+
+  // outline-color: #444444;
+
+  &:hover {
+    border-color: rgba(205, 205, 205, 1);
+  }
+
+  &:invalid {
+    // border-color: rgba(205, 205, 205, 0.5);
+    outline-color: #ff8282;
+    outline-width: 2px;
+  }
+
+  &:invalid .form__icon {
+    fill: #ff8282;
+  }
+
+  &:valid {
+    outline-color: #444444;
+  }
+
+  &:valid .form__icon {
+    fill: $leaf;
+  }
+
   &:-ms-input-placeholder {
 
     font-size: 16px;
-    line-height: 18px;
+    line-height: 22px;
     text-transform: uppercase;
     color: $dark-grey;
   }
@@ -287,7 +375,7 @@
   &::-webkit-input-placeholder {
 
     font-size: 16px;
-    line-height: 18px;
+    line-height: 22px;
     text-transform: uppercase;
     color: $dark-grey;
   }
@@ -295,7 +383,7 @@
   &::-moz-placeholder {
 
     font-size: 16px;
-    line-height: 18px;
+    line-height: 22px;
     text-transform: uppercase;
     color: $dark-grey;
   }
@@ -311,23 +399,31 @@
 
   border: 1px solid rgba(205, 205, 205, 0.5);
 
+  &:hover {
+    border-color: rgba(205, 205, 205, 1);
+  }
+
+  &:focus {
+    outline-color: #444444;
+  }
+
   &:-ms-input-placeholder {
     font-size: 16px;
-    line-height: 18px;
+    line-height: 20px;
     text-transform: uppercase;
     color: $dark-grey;
   }
 
   &::-webkit-input-placeholder {
     font-size: 16px;
-    line-height: 18px;
+    line-height: 20px;
     text-transform: uppercase;
     color: $dark-grey;
   }
 
   &::-moz-placeholder {
     font-size: 16px;
-    line-height: 18px;
+    line-height: 20px;
     text-transform: uppercase;
     color: $dark-grey;
   }
@@ -543,22 +639,31 @@
   .form__item--contacts {
     margin-bottom: 20px;
 
+    &:nth-of-type(1) .form__icon {
+      top: 20px;
+      right: 20px;
+    }
+
+    &:nth-of-type(2) .form__icon {
+      top: 16px;
+      right: 17px;
+    }
+
     &:nth-of-type(1) .form__label--contacts {
       margin-right: 19px;
       margin-bottom: 2px;
       margin-left: 3px;
     }
 
-    &:nth-of-type(1) .form__input {
+    &:nth-of-type(1) .form__input,
+    &:nth-of-type(2) .form__input {
       height: 50px;
+      padding-right: 56px;
+      padding-left: 19px;
     }
 
     &:nth-of-type(2) .form__label--contacts {
       margin-right: 16px;
-    }
-
-    &:nth-of-type(2) .form__input {
-      height: 50px;
     }
 
     &:nth-of-type(1)::after {
@@ -575,23 +680,25 @@
   .form__input {
     height: 50px;
     padding: 0 17px;
+    // padding-right: 52px;
+    // padding-left: 17px;
 
     font-size: 20px;
     line-height: 20px;
 
     &:-ms-input-placeholder {
       font-size: 20px;
-      line-height: 20px;
+      line-height: 26px;
     }
 
     &::-webkit-input-placeholder {
       font-size: 20px;
-      line-height: 20px;
+      line-height: 26px;
     }
 
     &::-moz-placeholder {
       font-size: 20px;
-      line-height: 20px;
+      line-height: 26px;
     }
   }
 
@@ -814,19 +921,6 @@
     margin-left: 1px;
   }
 
-  .form__label {
-    margin-right: 0;
-    margin-left: 0;
-  }
-
-  .form__label--text {
-    margin-bottom: 20px;
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-  }
-
   .form__list--option {
     margin-left: 28px;
   }
@@ -839,6 +933,16 @@
   .form__item--contacts {
     width: 46.8%;
     margin-bottom: 0;
+
+    // &:nth-of-type(1) .form__icon {
+    //   top: 20px;
+    //   right: 20px;
+    // }
+
+    // &:nth-of-type(2) .form__icon {
+    //   top: 17px;
+    //   right: 19px;
+    // }
 
     &:nth-of-type(1)::after {
       top: 21px;
@@ -862,6 +966,19 @@
 
     &:last-of-type {
       width: 20.2%;
+    }
+  }
+
+  .form__label {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .form__label--text {
+    margin-bottom: 20px;
+
+    &:last-of-type {
+      margin-bottom: 0;
     }
   }
 
