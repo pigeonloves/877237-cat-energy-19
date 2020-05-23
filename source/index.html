@@ -18,8 +18,8 @@
             </picture>
           </a>
         </div>
-        <nav class="main-nav main-nav--bg main-nav--closed main-nav--opened">
-          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <nav class="main-nav main-nav--bg">
+          <button class="main-nav__toggle main-nav__toggle--hidden" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list main-nav__list--bg">
               <li class="main-nav__item main-nav__item--bg main-nav__item--active">
@@ -140,21 +140,45 @@
                 </div>
               </div>
             </div>
-            <div class="example__column-2">
-              <picture>
-                <source type="image/webp" media="(min-width: 1440px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+            <div class="example__slider slider">
+              <input class="slider__toggle visually-hidden" type="radio" id="before" name="toggle" checked>
+              <input class="slider__toggle visually-hidden" type="radio" id="after" name="toggle">
+              <div class="slider">
+                <ul class="slider__list">
+                  <li class="slider__item slide slide-1" id="slide1">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
 
-                <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-                <img class="example__image" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="311" height="232" alt="Толстый кот">
-              </picture>
-              <div class="example__toggles">
-                <button class="example__toggle" type="button">Было</button>
-                <button class="example__toggle" type="button">Стало</button>
+                      <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                      <img class="example__image" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="311" height="232" alt="Толстый кот">
+                    </picture>
+                  </li>
+                  <li class="slider__item slide slide-2" id="slide2">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 1440px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
+
+                      <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                      <img class="example__image" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="311" height="232" alt="Толстый кот">
+                    </picture>
+                  </li>
+                </ul>
+                <div class="slider__range">
+                  <div class="slider__range-controls">
+                    <div class="slider__scale"></div>
+                    <div class="slider__scale-toggle"></div>
+                  </div>
+                  <div class="slider__controls">
+                    <label class="slider__label" for="before">Было</label>
+                    <label class="slider__label" for="after">Стало</label>
+                  </div>
+                </div>
               </div>
-            </div>
           </div>
         </div>
       </section>
@@ -232,5 +256,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="/js/slider.js"></script>
   </body>
 </html>
