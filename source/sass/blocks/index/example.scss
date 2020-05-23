@@ -235,10 +235,6 @@
 }
 
 @media (min-width: $desktop-width) {
-  // .example__wrapper {
-  //   margin: 0 110px;
-  // }
-
   .example__title {
     margin-top: 0;
     margin-bottom: 74px;
@@ -276,12 +272,6 @@
     background-color: $white-four;
   }
 
-  // .example__costs {
-  //   align-self: flex-start;
-
-  //   width: 270px;
-  // }
-
   .example__costs-wrap {
     flex-direction: row;
     align-self: flex-start;
@@ -293,8 +283,8 @@
     text-align: end;
   }
 
-  .example__column-2 {
-    margin-right: 86px;
+  .example__slider {
+    width: 57%;
   }
 
   .example__image {
