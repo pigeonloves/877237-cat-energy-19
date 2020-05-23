@@ -18,7 +18,7 @@
             </picture>
           </a>
         </div>
-        <nav class="main-nav main-nav--closed main-nav--opened">
+        <nav class="main-nav">
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list">
@@ -90,11 +90,13 @@
               <!-- <div class="form__legend--contacts"> -->
                 <ul class="form__list form__list--contacts">
                   <li class="form__item form__item--contacts">
-                    <input class="form__input" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+                    <input class="form__input form__input--contacts" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+                    <svg class="form__icon" width="18" height="13"><use xlink:href="img/sprite.svg#icon-mail"></use></svg>
                     <label class="form__label form__label--contacts">E-mail:*</label>
                   </li>
                   <li class="form__item form__item--contacts">
-                    <input class="form__input" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
+                    <input class="form__input form__input--contacts" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
+                    <svg class="form__icon" width="20" height="21"><use xlink:href="img/sprite.svg#icon-phone"></use></svg>
                     <label class="form__label form__label--contacts">Телефон:*</label>
                   </li>
                 </ul>
@@ -117,19 +119,19 @@
             </div>
             <div class="form__fieldset-wrap form__fieldset-wrap--extra">
               <ul class="form__list form__list--extra">
-                <li class="form__item">
+                <li class="form__item form__item--extra">
                   <input class="visually-hidden form__input-checkbox" id="sweetener" type="checkbox" name="sweetener" value="sweetener" checked>
                   <label class="form__label  form__label--extra" for="sweetener">Сахарозаменитель</label>
                 </li>
-                <li class="form__item">
+                <li class="form__item form__item--extra">
                   <input class="visually-hidden form__input-checkbox" id="water" type="checkbox" name="water" value="water">
                   <label class="form__label  form__label--extra" for="water">Питьевая вода</label>
                 </li>
-                <li class="form__item">
+                <li class="form__item form__item--extra">
                   <input class="visually-hidden form__input-checkbox" id="milk" type="checkbox" name="milk" value="milk">
                   <label class="form__label  form__label--extra" for="milk">Молоко</label>
                 </li>
-                <li class="form__item">
+                <li class="form__item form__item--extra">
                   <input class="visually-hidden form__input-checkbox" id="vitamins" type="checkbox" name="vitamins" value="vitamins">
                   <label class="form__label  form__label--extra" for="vitamins">Витамины</label>
                 </li>
@@ -154,6 +156,10 @@
           </div>
         </div>
         <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+
           <source media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
           <img class="map__image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400" alt="Расположение офиса интернет-магазина «Кэт-энерджи»">
@@ -164,30 +170,50 @@
     <footer class="page-footer">
       <div class="page-footer__wrap">
         <a href="#">
-          <img class="logo page-footer__logo-image logo--footer" src="img/logo-footer.svg" width="128" height="24" alt="Логотип «Кэт-энерджи»">
+          <!-- <img class="logo page-footer__logo-image logo--footer" src="img/logo-footer.svg" width="128" height="24" alt="Логотип «Кэт-энерджи»"> -->
+          <svg class="logo page-footer__logo-image logo--footer" width="128" height="24"><use xlink:href="img/sprite.svg#logo-footer"></use></svg>
         </a>
         <div class="socials page-footer__socials">
           <ul class="socials__list">
             <li class="socials__item">
-              <a href="https://vk.com" class="socials__link"><img src="img/icon-vk.svg" width="22px" height="12px" alt="Vk" class="socials__image">Vk</a>
+              <a href="https://vk.com" class="socials__link">
+                <!-- <img src="img/icon-vk.svg" width="22px" height="12px" alt="Vk" class="socials__image"> -->
+                <svg class="socials__icon" width="22px" height="12px"><use xlink:href="img/sprite.svg#icon-vk"></use></svg>
+                Vk
+              </a>
             </li>
             <li class="socials__item">
-              <a href="https://www.instagram.com" class="socials__link"><img src="img/icon-insta.svg" width="17px" height="17px" alt="Instagram" class="socials__image">Instagram</a>
+              <a href="https://www.instagram.com" class="socials__link">
+                <!-- <img src="img/icon-insta.svg" width="17px" height="17px" alt="Instagram" class="socials__image"> -->
+                <svg class="socials__icon" width="17px" height="17px"><use xlink:href="img/sprite.svg#icon-insta"></use></svg>
+                Instagram
+              </a>
             </li>
             <li class="socials__item">
-              <a href="https://www.facebook.com" class="socials__link"><img src="img/icon-fb.svg" width="10px" height="19px" alt="Facebook" class="socials__image">Facebook</a>
+              <a href="https://www.facebook.com" class="socials__link">
+                <!-- <img src="img/icon-fb.svg" width="10px" height="19px" alt="Facebook" class="socials__image"> -->
+                <svg class="socials__icon" width="10px" height="19px"><use xlink:href="img/sprite.svg#icon-fb"></use></svg>
+                Facebook
+              </a>
             </li>
           </ul>
         </div>
         <div class="page-footer__link-wrap">
-          <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <!-- <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
             <p class="page-footer__link-text">HTML Academy</p>
           </a>
           <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="page-footer__link-image" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
+            <svg class="page-footer__link-image" width="27" height="34"><use xlink:href="img/sprite.svg#htmlacademy"></use></svg>
+          </a> -->
+
+          <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <label class="page-footer__link-text" for="htmlacademy">HTML Academy</label>
+            <svg class="page-footer__link-image" id="htmlacademy" width="27" height="34"><use xlink:href="img/sprite.svg#htmlacademy"></use></svg>
           </a>
         </div>
       </div>
     </footer>
+
+    <script src="/js/slider.js"></script>
   </body>
 </html>

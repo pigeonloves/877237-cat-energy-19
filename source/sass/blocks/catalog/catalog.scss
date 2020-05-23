@@ -96,6 +96,18 @@
   text-align: center;
 }
 
+.catalog__icon {
+  align-self: center;
+
+  &:nth-of-type(1) {
+    margin-bottom: 22px;
+  }
+
+  &:nth-of-type(2) {
+    display: none;
+  }
+}
+
 .catalog__text {
   position: relative;
 
@@ -194,6 +206,16 @@
       border: $very-light-pink-three;
       border-color: rgba(205, 205, 205, 0.5);
     }
+
+    &:last-of-type .button {
+      &:hover {
+        background-color: $grey;
+      }
+
+      &:active {
+        color: rgba(68, 68, 68, 0.3);
+      }
+    }
   }
 
   .catalog__columns {
@@ -250,6 +272,18 @@
   .catalog__link-buy {
     margin: 0 38px;
     margin-bottom: 40px;
+  }
+
+  .catalog__icon {
+    &:nth-of-type(1) {
+      display: none;
+    }
+
+    &:nth-of-type(2) {
+      display: block;
+      margin-top: 54px;
+      margin-bottom: 31px;
+    }
   }
 
   .catalog__text {
