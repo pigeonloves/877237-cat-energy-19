@@ -336,12 +336,6 @@
 
   border: 1px solid rgba(205, 205, 205, 0.5);
 
-  // &:focus {
-  //   outline-color: #444444;
-  // }
-
-  // outline-color: #444444;
-
   &:hover {
     border-color: rgba(205, 205, 205, 1);
   }
@@ -352,7 +346,7 @@
     outline-width: 2px;
   }
 
-  &:invalid .form__icon {
+  &:focus:invalid + .form__icon {
     fill: #ff8282;
   }
 
@@ -360,7 +354,7 @@
     outline-color: #444444;
   }
 
-  &:valid .form__icon {
+  &:focus:valid + .form__icon {
     fill: $leaf;
   }
 
@@ -709,8 +703,8 @@
     }
 
     &:checked + .form__label--option::after {
-      top: 11.2px;
-      left: 12.2px;
+      top: 11px;
+      left: 12px;
 
       width: 18px;
       height: 18px;
