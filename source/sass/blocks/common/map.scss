@@ -3,14 +3,23 @@
 
   display: flex;
   flex-direction: column;
-}
+  margin: 0 auto;
 
-.map--bg {
-  background-color: $white-four;
+  &--bg {
+    background-color: $white-four;
+  }
 }
 
 .map__wrapper {
-  z-index: 1;
+  z-index: 2;
+}
+
+.map__wrap {
+  z-index: 2;
+}
+
+.map__container {
+  z-index: 2;
 
   display: flex;
   justify-content: space-between;
@@ -26,7 +35,7 @@
 
 .map__invite {
   width: 125px;
-  margin-top: 30px;
+  margin-top: 28px;
   margin-left: 19px;
 
   font-size: 16px;
@@ -37,8 +46,8 @@
 .map__address-wrapper {
   display: flex;
   flex-direction: column;
-  width: 135px;
-  margin-top: 30px;
+  width: 136px;
+  margin-top: 28px;
   margin-right: 24px;
 }
 
@@ -52,15 +61,37 @@
 }
 
 .map__image {
+  position: relative;
+
   display: flex;
-  width: 320px;
+  // width: 320px;
   height: 400px;
   margin: 0 auto;
-  margin-top: -36px;
+  margin-top: -38px;
+
+  &--interactive {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: 400px;
+  }
+}
+
+.map__pin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 60px;
+
+  margin-left: -30px;
+  margin-top: 15px;
 }
 
 @media (min-width: $tablet-width) {
-  .map__wrapper {
+  .map__container {
     min-height: 201px;
   }
 
@@ -91,21 +122,43 @@
     width: 767px;
     margin-top: -4px;
   }
+
+  .map__pin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 124px;
+
+    margin-left: -62px;
+    margin-top: 48px;
+  }
 }
 
 @media (min-width: $desktop-width) {
-  .map--bg {
-    background-color: $white;
+  .map {
+    &--bg {
+      background-color: $white;
+    }
   }
 
   .map__wrapper {
+    z-index: 2;
+  }
+
+  .map__wrap {
+    position: relative;
+    z-index: 2;
+  }
+
+  .map__container {
     position: absolute;
-    top: 95px;
-    left: 110px;
+    top: 94px;
+    left: 50%;
 
     display: flex;
     width: 570px;
-    margin: 0;
+    margin-left: -610px;
 
     background-color: $white;
   }
@@ -124,5 +177,17 @@
 
   .map__image {
     width: 1440px;
+    margin-top: 0;
+  }
+
+  .map__pin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 124px;
+
+    margin-left: 278px;
+    margin-top: -50px;
   }
 }

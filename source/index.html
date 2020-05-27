@@ -2,11 +2,21 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Интернет-магазин «Кэт-энерджи»</title>
-    <link href="css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
+    <link href="css/style.min.css" rel="stylesheet">
+    <script src="js/picturefill.min.js" async></script>
+    <script>
+      document.createElement("picture");
+    </script>
   </head>
   <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
     <header class="page-header page-header--bg">
       <div class="page-header__wrapper">
         <div class="page-header__wrapper-logo">
@@ -40,20 +50,27 @@
     <main class="page-main">
 
       <section class="promo">
-        <div class="promo__wrapper">
-          <h1 class="promo__title">Функциональное питание для котов</h1>
-          <p class="promo__slogan">Занялся собой? Займись котом!</p>
-        </div>
-        <picture>
-          <source type="image/webp" media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x">
+        <div class="promo__wrap">
+          <div class="promo__wrapper">
+            <h1 class="promo__title">Функциональное питание для котов</h1>
+            <p class="promo__slogan">Занялся собой? Займись котом!</p>
 
-          <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
-          <img class="promo__image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="270" alt="Продукт «Cat Energy Pro 500 г» со вкусом курицы">
-        </picture>
-        <a class="button promo__button" href="form.html">Подобрать программу</a>
+          </div>
+        </div>
+        <div class="promo__wrap">
+          <div class="promo__wrapper">
+            <picture class="promo__picture">
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.webp 1x, img/index-can-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/index-can-tablet@1x.webp 1x, img/index-can-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/index-can-mobile@1x.webp 1x, img/index-can-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1440px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x">
+              <img class="promo__image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="270" alt="Продукт «Cat Energy Pro 500 г» со вкусом курицы">
+            </picture>
+            <a class="button promo__button" href="form.html">Подобрать программу</a>
+          </div>
+        </div>
       </section>
 
       <section class="programs">
@@ -64,23 +81,13 @@
               <h3 class="programs__title">Похудение</h3>
               <p class="programs__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
                 Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-                <a class="programs__link" href="catalog.html">
-                  Каталог Slim
-                  <!-- <svg class="programs__link-icon" width="25px" height="12px">
-                    <use xlink:href="img/sprite.svg#icon-right-arrow"></use>
-                  </svg> -->
-                </a>
+                <a class="programs__link" href="catalog.html">Каталог Slim</a>
             </li>
             <li class="programs__item">
               <h3 class="programs__title">Набор массы</h3>
               <p class="programs__description programs__description--mass">Заработать авторитет среди дворовых котов и даже собак?
                 Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-                <a class="programs__link" href="catalog.html">
-                  Каталог pro
-                  <!-- <svg class="programs__link-icon" width="25px" height="12px">
-                    <use xlink:href="img/sprite.svg#icon-right-arrow"></use>
-                  </svg> -->
-                </a>
+                <a class="programs__link" href="catalog.html">Каталог pro</a>
             </li>
           </ul>
         </div>
@@ -111,8 +118,10 @@
       </section>
 
       <section class="example">
-        <div class="example__wrapper">
+        <div class="example__title-wrap">
           <h2 class="example__title">Живой пример</h2>
+        </div>
+        <div class="example__wrapper">
           <div class="example__columns">
             <div class="example__column-1">
               <p class="example__description">
@@ -153,7 +162,7 @@
 
                       <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
                       <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-                      <img class="example__image" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="311" height="232" alt="Толстый кот">
+                      <img class="slider__image" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" width="311" height="232" alt="Толстый кот">
                     </picture>
                   </li>
                   <li class="slider__item slide slide-2" id="slide2">
@@ -164,7 +173,7 @@
 
                       <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
                       <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-                      <img class="example__image" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="311" height="232" alt="Толстый кот">
+                      <img class="slider__image" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" width="311" height="232" alt="Толстый кот">
                     </picture>
                   </li>
                 </ul>
@@ -179,19 +188,24 @@
                   </div>
                 </div>
               </div>
+            </div>
           </div>
         </div>
       </section>
-
       <section class="map">
         <h2 class="visually-hidden">Карта</h2>
-        <div class="map__wrapper map__wrapper--index">
-          <p class="map__invite">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
-          <div class="map__address-wrapper">
-            <p class="map__address">ул. Большая Конюшенная, д. 19/8</p>
-            <p class="map__address">Санкт-Петербург</p>
+        <div class="map__wrapper">
+          <div class="map__wrap">
+            <div class="map__container map__container--index">
+              <p class="map__invite">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+              <div class="map__address-wrapper">
+                <p class="map__address">ул. Большая Конюшенная, д. 19/8</p>
+                <p class="map__address">Санкт-Петербург</p>
+              </div>
+            </div>
           </div>
         </div>
+        <iframe class="map__image--interactive" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003183!2d30.32085871617598!3d59.938719169054046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1590399905255!5m2!1sru!2sru" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         <picture>
           <source type="image/webp" media="(min-width: 1440px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
           <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
@@ -201,62 +215,58 @@
           <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
           <img class="map__image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400" alt="Расположение офиса интернет-магазина «Кэт-энерджи»">
         </picture>
+        <img class="map__pin" src="img/map-pin.png" width="55" height="53" alt="">
       </section>
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__wrap">
-        <a href="#">
-          <!-- <img class="logo page-footer__logo-image logo--footer" src="img/logo-footer.svg" width="128" height="24" alt="Логотип «Кэт-энерджи»"> -->
-          <svg class="logo page-footer__logo-image logo--footer" width="128" height="24"><use xlink:href="img/sprite.svg#logo-footer"></use></svg>
-        </a>
-        <div class="socials page-footer__socials">
-          <ul class="socials__list">
-            <li class="socials__item">
-              <a href="https://vk.com" class="socials__link">
-                <!-- <img src="img/icon-vk.svg" width="22px" height="12px" alt="Vk" class="socials__image"> -->
-                <svg class="socials__icon" width="22px" height="12px">
-                  <use xlink:href="img/sprite.svg#icon-vk"></use>
-                </svg>
-                Vk
-              </a>
-            </li>
-            <li class="socials__item">
-              <a href="https://www.instagram.com" class="socials__link">
-                <!-- <img src="img/icon-insta.svg" width="17px" height="17px" alt="Instagram" class="socials__image"> -->
-                <svg class="socials__icon" width="17px" height="17px">
-                  <use xlink:href="img/sprite.svg#icon-insta"></use>
-                </svg>
-                Instagram
-              </a>
-            </li>
-            <li class="socials__item">
-              <a href="https://www.facebook.com" class="socials__link">
-                <!-- <img src="img/icon-fb.svg" width="10px" height="19px" alt="Facebook" class="socials__image"> -->
-                <svg class="socials__icon" width="10px" height="19px">
-                  <use xlink:href="img/sprite.svg#icon-fb"></use>
-                </svg>
-                Facebook
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="page-footer__link-wrap">
-          <!-- <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <p class="page-footer__link-text">HTML Academy</p>
+      <div class="page-footer__container">
+        <div class="page-footer__wrap">
+          <a href="#">
+            <img class="logo page-footer__logo-image logo--footer" src="img/logo-footer.svg" width="128" height="24" alt="Логотип «Кэт-энерджи»">
           </a>
-          <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <svg class="page-footer__link-image" width="27" height="34"><use xlink:href="img/sprite.svg#htmlacademy"></use></svg>
-          </a> -->
-
-          <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <label class="page-footer__link-text" for="htmlacademy">HTML Academy</label>
-            <svg class="page-footer__link-image" id="htmlacademy" width="27" height="34"><use xlink:href="img/sprite.svg#htmlacademy"></use></svg>
-          </a>
+          <div class="socials page-footer__socials">
+            <ul class="socials__list">
+              <li class="socials__item">
+                <a href="https://vk.com" class="socials__link">
+                  <svg class="socials__icon" width="22" height="12">
+                    <use xlink:href="img/sprite.svg#icon-vk"></use>
+                  </svg>
+                  Vk
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="https://www.instagram.com" class="socials__link">
+                  <svg class="socials__icon" width="16" height="16">
+                    <use xlink:href="img/sprite.svg#icon-insta"></use>
+                  </svg>
+                  Instagram
+                </a>
+              </li>
+              <li class="socials__item">
+                <a href="https://www.facebook.com" class="socials__link">
+                  <svg class="socials__icon" width="10" height="19">
+                    <use xlink:href="img/sprite.svg#icon-fb"></use>
+                  </svg>
+                  Facebook
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="page-footer__link-wrap">
+            <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
+              <p class="page-footer__link-text">HTML Academy</p>
+            </a>
+            <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
+              <svg class="page-footer__link-image" width="27" height="34"><use xlink:href="img/sprite.svg#icon-htmlacademy"></use></svg>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
 
-    <script src="/js/slider.js"></script>
+    <script src="js/main-nav.js"></script>
+    <script src="js/svg4everybody.js"></script>
+    <script>svg4everybody(); // run it now or whenever you are ready</script>
   </body>
 </html>

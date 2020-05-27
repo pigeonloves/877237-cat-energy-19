@@ -1,10 +1,10 @@
 .socials__list {
   display: flex;
-  align-items: center;
   justify-content: center;
   min-height: 62px;
   margin: 0 auto;
   padding: 0;
+  box-sizing: border-box;
 
   border-top: $very-light-pink-three;
   border-top-color: rgba(205, 205, 205, 0.1);
@@ -15,8 +15,6 @@
 }
 
 .socials__item {
-  // position: relative;
-
   width: 32px;
   height: 32px;
   margin-right: 22px;
@@ -36,7 +34,7 @@
   &:nth-of-type(2) .socials__icon {
     position: absolute;
     top: 10px;
-    left: 7px;
+    left: 8px;
   }
 
   &:nth-of-type(3) .socials__icon {
@@ -44,48 +42,6 @@
     top: 8px;
     left: 10px;
   }
-
-  // &:nth-of-type(1)::before {
-  //   content: "";
-
-  //   position: absolute;
-  //   top: 12px;
-  //   left: 3px;
-
-  //   width: 22px;
-  //   height: 12px;
-
-  //   background-image: url("../img/icon-vk.svg");
-  //   background-repeat: no-repeat;
-  // }
-
-  // &:nth-of-type(2)::before {
-  //   content: "";
-
-  //   position: absolute;
-  //   top: 10px;
-  //   left: 8px;
-
-  //   width: 17px;
-  //   height: 17px;
-
-  //   background-image: url("../img/icon-insta.svg");
-  //   background-repeat: no-repeat;
-  // }
-
-  // &:nth-of-type(3)::before {
-  //   content: "";
-
-  //   position: absolute;
-  //   top: 8px;
-  //   left: 11px;
-
-  //   width: 10px;
-  //   height: 19px;
-
-  //   background-image: url("../img/icon-fb.svg");
-  //   background-repeat: no-repeat;
-  // }
 }
 
 .socials__link {
@@ -106,6 +62,7 @@
 
 @media (min-width: $tablet-width) {
   .socials__list {
+    min-height: 32px;
     margin-right: -29px;
 
     border: none;
@@ -116,7 +73,7 @@
 
     &:nth-of-type(1) .socials__icon {
       position: absolute;
-      top: 7px;
+      top: 10px;
       left: 2px;
 
       width: 30px;
@@ -125,7 +82,7 @@
 
     &:nth-of-type(2) .socials__icon {
       position: absolute;
-      top: 4px;
+      top: 7px;
       left: 7px;
 
       width: 23px;
@@ -134,41 +91,11 @@
 
     &:nth-of-type(3) .socials__icon {
       position: absolute;
-      top: 1px;
+      top: 3px;
       left: 6px;
 
       width: 14px;
-      height: 28px;
+      height: 30px;
     }
-
-    // &:nth-of-type(1)::before {
-    //   top: 10px;
-    //   left: 3px;
-
-    //   width: 30px;
-    //   height: 16px;
-    // }
-
-    // &:nth-of-type(2)::before {
-    //   top: 8px;
-    //   left: 8px;
-
-    //   width: 23px;
-    //   height: 23px;
-    // }
-
-    // &:nth-of-type(3)::before {
-    //   top: 6px;
-    //   left: 11px;
-
-    //   width: 14px;
-    //   height: 28px;
-    // }
   }
-}
-
-@media (min-width: $desktop-width) {
-  // .socials__list {
-  //   margin-right: -116px;
-  // }
 }

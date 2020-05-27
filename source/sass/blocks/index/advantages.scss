@@ -1,4 +1,5 @@
 .advantages {
+  margin: 0 auto;
   margin-bottom: 20px;
 }
 
@@ -49,7 +50,7 @@
     content: "";
 
     position: absolute;
-    top: 2px;
+    top: 3px;
     left: 5px;
 
     width: 40px;
@@ -68,7 +69,7 @@
     content: "";
 
     position: absolute;
-    top: 1px;
+    top: 2px;
     left: 5px;
 
     width: 50px;
@@ -87,7 +88,7 @@
     content: "";
 
     position: absolute;
-    top: 2px;
+    top: 3px;
     left: 4px;
 
     width: 45px;
@@ -106,7 +107,7 @@
     content: "";
 
     position: absolute;
-    top: 2px;
+    top: 3px;
     left: 5px;
 
     width: 45px;
@@ -126,7 +127,7 @@
   position: relative;
 
   margin: 0;
-  padding-left: 79px;
+  padding-left: 80px;
 
   font-size: 14px;
   line-height: 18px;
@@ -137,7 +138,7 @@
     content: "";
 
     position: absolute;
-    top: -3px;
+    top: -2px;
     left: 0;
 
     width: 60px;
@@ -163,7 +164,7 @@
   }
 
   .advantages__title {
-    margin-bottom: 70px;
+    margin-bottom: 72px;
 
     font-size: 60px;
     line-height: 60px;
@@ -180,12 +181,12 @@
     z-index: 1;
     position: relative;
 
-    width: 46%;
+    width: 45.7%;
     margin-bottom: 116px;
 
 
     &:nth-of-type(1) .advantages__description::after {
-      top: 17px;
+      top: 15px;
       left: 15px;
 
       width: 60px;
@@ -193,15 +194,15 @@
     }
 
     &:nth-of-type(2) .advantages__description::after {
-      top: 17px;
-      left: 17px;
+      top: 15px;
+      left: 15px;
 
       width: 60px;
       height: 60px;
     }
 
     &:nth-of-type(3) .advantages__description::after {
-      top: 17px;
+      top: 15px;
       left: 15px;
 
       width: 60px;
@@ -209,11 +210,30 @@
     }
 
     &:nth-of-type(4) .advantages__description::after {
-      top: 17px;
-      left: 16px;
+      top: 15px;
+      left: 15px;
 
       width: 60px;
       height: 60px;
+    }
+
+    &:nth-of-type(1) .advantages__number {
+      margin-left: 117px;
+    }
+
+    &:nth-of-type(2) .advantages__number {
+      margin: 0;
+      margin-left: 112px;
+    }
+
+    &:nth-of-type(3) .advantages__number {
+      margin: 0;
+      margin-left: 114px;
+    }
+
+    &:nth-of-type(4) .advantages__number {
+      margin: 0;
+      margin-left: 114px;
     }
   }
 
@@ -224,7 +244,7 @@
     width: 76%;
     margin: 0;
     // margin-bottom: 150px;
-    padding-top: 114px;
+    padding-top: 112px;
     padding-left: 0;
 
     font-size: 16px;
@@ -250,12 +270,14 @@
 
   .advantages__item:nth-last-of-type(1),
   .advantages__item:nth-last-of-type(2) {
-    margin-bottom: 87px;
+    margin-bottom: 85px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .advantages {
+    max-width: 1440px;
+
     border-bottom: none;
   }
 

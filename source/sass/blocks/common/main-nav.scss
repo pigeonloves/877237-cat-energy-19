@@ -16,9 +16,9 @@
   cursor: pointer;
   border: none;
 
-  &--hidden {
-    display: none;
-  }
+  // &--hidden {
+  //   display: none;
+  // }
 }
 
 .main-nav--closed .main-nav__toggle::before {
@@ -79,15 +79,25 @@
 
 .main-nav__item {
   box-sizing: border-box;
-  min-height: 66px;
-  padding: 22px 0 18px;
+  min-height: 65px;
+  padding: 22px 2px 18px 0;
 
   text-align: center;
 
   border-bottom: $grey-border;
 
   &:first-of-type {
+    min-height: 67px;
+
     border-top: $grey-border;
+  }
+
+  &:nth-of-type(2) {
+    min-height: 66px;
+  }
+
+  &:last-of-type {
+    border-bottom: none;
   }
 }
 
@@ -106,6 +116,19 @@
     &--opened .main-nav__list {
       display: block;
     }
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__wrapper {
+    position: static;
+    min-height: 0;
+  }
+
+  .main-nav--nojs .main-nav__item {
+    display: block;
   }
 }
 
@@ -140,7 +163,7 @@
 
   .main-nav__item {
     margin-right: 36px;
-    padding: 41px 0 12px;
+    padding: 42px 0 12px;
 
     border: none;
 
@@ -149,6 +172,8 @@
     }
 
     &:first-of-type {
+      margin-right: 35px;
+
       border: none;
     }
 
